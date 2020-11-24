@@ -1,0 +1,42 @@
+<!-- Group 5 - Assignment 3 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<resources>
+    <string name="app_name">Group5_MAPD711_Assign3_PizzaOnline</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="chooseSize">Choose Pizza Size</string>
+    <string name="chooseExtraToppings">Choose Extra Toppings</string>
+
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="extraLarge">Extra Large</string>
+
+    <string name="pizzaName">Pizza</string>
+    <string name="pizzaDetail">ingredients</string>
+
+    <string name="meatSupreme">Meat Supreme</string>
+    <string name="veggie">Veggie</string>
+    <string name="mediterranean">Mediterranean</string>
+    <string name="cheddarSupreme">Cheddar Supreme</string>
+    <string name="superHawaiian">Super Hawaiian</string>
+
+    <string name="detailMeatSupreme">Pepperoni, bacon, ground beef, spicy sausage</string>
+    <string name="detailVeggie">Fresh mushrooms, green peppers, Spanish onions</string>
+    <string name="detailMediterranean">Sundried black olives, Spanish onions, feta cheese, sundried tomatoes</string>
+    <string name="detailCheddarSupreme">Broccoli, cheddar cheese, grilled chicken</string>
+    <string name="detailSuperHawaiian">Smoked ham, pineapple, bacon</string>
+
+    <string name="extraMozzarella">Extra Mozzarella</string>
+    <string name="greenPepper">Green Pepper</string>
+    <string name="smokedHam">Smoked Ham</string>
+    <string name="spinach">Spinach</string>
+    <string name="blackOlivies">Black Olivies</string>
+    <string name="spanishOnions">Spanish Onions</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Group 5 - Assignment 3 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/meatSupreme"
+        android:title="Meat Supreme"
+        android:orderInCategory="1" />
+
+    <item
+        android:id="@+id/superHawaiian"
+        android:title="Super Hawaiian"
+        android:orderInCategory="2" />
+
+    <item
+        android:id="@+id/veggie"
+        android:title="Veggie"
+        android:orderInCategory="3" />
+
+    <item
+        android:id="@+id/mediterranean"
+        android:title="Mediterranean"
+        android:orderInCategory="4" />
+
+    <item
+        android:id="@+id/cheddarSupreme"
+        android:title="Cheddar Supreme"
+        android:orderInCategory="5" />
+</menu>

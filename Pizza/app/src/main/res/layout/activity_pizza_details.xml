@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Group 5 - Assignment 4 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".views.PizzaDetailsActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivTypeofPizza"
+        android:layout_width="411dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/mediterranean"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/txtPizzaName"
+        android:layout_width="400dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/pizzaName"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <TextView
+        android:id="@+id/txtPizzaDetail"
+        android:layout_width="400dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/pizzaDetail"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <TextView
+        android:id="@+id/txtChooseSize"
+        android:layout_width="400dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/chooseSize"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+    <RadioGroup
+        android:id="@+id/rgSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbSmall"
+            android:layout_width="78dp"
+            android:layout_height="25dp"
+            android:text="@string/small"
+            android:fontFamily="casual"
+            android:textSize="14sp" />
+        <RadioButton android:id="@+id/rbMedium"
+
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/medium"
+            android:fontFamily="casual"
+            android:textSize="14sp"
+            />
+        <RadioButton android:id="@+id/rbLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="@string/large"
+            android:fontFamily="casual"
+            android:textSize="14sp"
+            />
+
+        <RadioButton
+            android:id="@+id/rbExtraLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:checked="true"
+            android:fontFamily="casual"
+            android:text="@string/extraLarge"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtChooseExtraToppings"
+        android:layout_width="400dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/chooseExtraToppings"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="21dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgGreenPepper"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/greenpepper" />
+
+                <CheckBox
+                    android:id="@+id/chkGreenPepper"
+                    android:layout_width="125dp"
+                    android:layout_height="79dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/greenPepper"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgSmokedHam"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/smokedham" />
+
+                <CheckBox
+                    android:id="@+id/chkSmokedHam"
+                    android:layout_width="125dp"
+                    android:layout_height="79dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/smokedHam"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgSpanishOnions"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/spanishonions" />
+
+                <CheckBox
+                    android:id="@+id/chkSpanishOnions"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/spanishOnions"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgBlackOlivies"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/blackolivies" />
+
+                <CheckBox
+                    android:id="@+id/chkBlackOlivies"
+                    android:layout_width="125dp"
+                    android:layout_height="79dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/blackOlivies"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnCheckOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="Check Out"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgSpinach"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/spinach" />
+
+                <CheckBox
+                    android:id="@+id/chkSpinach"
+                    android:layout_width="125dp"
+                    android:layout_height="79dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/spinach"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgExtraMozzarella"
+                    android:layout_width="125dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/extramozzarella" />
+
+                <CheckBox
+                    android:id="@+id/chkExtraMozzarella"
+                    android:layout_width="125dp"
+                    android:layout_height="79dp"
+                    android:background="#4D020000"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/extraMozzarella"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

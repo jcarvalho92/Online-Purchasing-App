@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Group 5 - Assignment 3 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<resources>
+    <string-array name="array_cType">
+        <item> Visa Card </item>
+        <item> Master Card </item>
+        <item> American Express Card </item>
+    </string-array>
+</resources>

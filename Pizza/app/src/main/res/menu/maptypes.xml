@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Group 5 - Assignment 3 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/standard"
+        android:title="Standard View"
+        android:orderInCategory="1" />
+
+    <item
+        android:id="@+id/satellite"
+        android:title="Satellite View"
+        android:orderInCategory="2" />
+
+    <item
+        android:id="@+id/hybrid"
+        android:title="Hybrid View"
+        android:orderInCategory="3" />
+
+</menu>

@@ -1,0 +1,27 @@
+<!-- Group 5 - Assignment 3 -->
+<!-- Student1: Abdeali Mody - Student ID: 301085484 -->
+<!-- Student2: Juliana de Carvalho - Student ID: 301137060 -->
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=6F:5B:CA:8A:FA:7D:A4:D6:8C:1E:28:90:F4:74:C5:48:E5:86:E2:57%3Bcom.example.group5_mapd711_assign2_pizzaonline
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.group5_mapd711_assign2_pizzaonline
+
+    SHA-1 certificate fingerprint:
+    6F:5B:CA:8A:FA:7D:A4:D6:8C:1E:28:90:F4:74:C5:48:E5:86:E2:57
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">Your Key here</string>
+</resources>
