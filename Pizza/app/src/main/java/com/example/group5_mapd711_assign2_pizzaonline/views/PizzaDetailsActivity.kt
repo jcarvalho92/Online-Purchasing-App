@@ -10,6 +10,9 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.group5_mapd711_assign2_pizzaonline.R
 import kotlinx.android.synthetic.main.activity_pizza_details.*
+import org.json.JSONObject
+import java.io.FileNotFoundException
+import java.io.IOException
 
 
 class PizzaDetailsActivity : AppCompatActivity()
@@ -29,6 +32,38 @@ class PizzaDetailsActivity : AppCompatActivity()
 
         //getting values from previous activity using intent object
         val typeofPizza = intent.getStringExtra("typeofPizza")
+
+
+        var text = ""
+        val filename = "pizzas.txt"
+
+        try {
+            val input = openFileInput(filename)
+            input.use {
+                var buffer = StringBuilder()
+                var bytes_read = input.read()
+
+                while(bytes_read != -1) {
+                    buffer.append(bytes_read.toChar())
+                    bytes_read = input.read()
+                }
+                runOnUiThread(Runnable {
+                    text = buffer.toString()
+                })
+            }
+        }
+        catch (fnfe: FileNotFoundException) {
+
+            print("file not found, occurs only once")
+        }
+        catch (ioe: IOException) {
+            print("IOException : $ioe")
+        }
+
+        val jsonObject = JSONObject(text)
+        val newPizzas = jsonObject.get("pizza").toString()
+        val ingredients = jsonObject.get("ingredients").toString()
+
 
         //checking what type of pizza have been choosen from the menu items
         //changing image, pizza name and details about the pizza  on selection of pizza
@@ -57,6 +92,11 @@ class PizzaDetailsActivity : AppCompatActivity()
                 ivTypeofPizza.setImageResource(R.drawable.cheddar)
                 txtPizzaName.text = resources.getString(R.string.cheddarSupreme)
                 txtPizzaDetail.text = resources.getString(R.string.detailCheddarSupreme)
+            }
+            newPizzas -> {
+                ivTypeofPizza.setImageResource(R.drawable.veggie)
+                txtPizzaName.text = newPizzas
+                txtPizzaDetail.text = ingredients
             }
             else -> {
                 ivTypeofPizza.setImageResource(R.drawable.meat)

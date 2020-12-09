@@ -8,21 +8,23 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.example.group5_mapd711_assign2_pizzaonline.R
-import com.example.group5_mapd711_assign2_pizzaonline.model.Pizza
 import com.example.group5_mapd711_assign2_pizzaonline.viewmodels.PizzaViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONObject
+import java.io.FileNotFoundException
+import java.io.IOException
+
 
 class MainActivity : AppCompatActivity() {
 
+    var newId = 0
+    var pizzaName = ""
     lateinit var pizzaViewModel: PizzaViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
 
         val intent = intent
         val userType = intent.getStringExtra("userType")
@@ -71,7 +73,45 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        var text = ""
+        val filename = "pizzas.txt"
+
+            try {
+                val input = openFileInput(filename)
+                input.use {
+                    var buffer = StringBuilder()
+                    var bytes_read = input.read()
+
+                    while(bytes_read != -1) {
+                        buffer.append(bytes_read.toChar())
+                        bytes_read = input.read()
+                    }
+                    runOnUiThread(Runnable {
+                        text = buffer.toString()
+                    })
+                }
+            }
+            catch (fnfe: FileNotFoundException) {
+
+                print("file not found, occurs only once")
+            }
+            catch (ioe: IOException) {
+              print("IOException : $ioe")
+            }
+
+
+        var size = 6
+        size += size
+
+        newId = size
+
+        val jsonObject = JSONObject(text)
+        pizzaName = jsonObject.get("pizza").toString()
+
+
         //adding the Options menu in the activity
+        menu?.add(0, newId, size, pizzaName)
+
         menuInflater.inflate(R.menu.main, menu)
 
         return true
@@ -93,6 +133,8 @@ class MainActivity : AppCompatActivity() {
                 i.putExtra("typeofPizza", "Mediterranean")
             R.id.cheddarSupreme ->
                 i.putExtra("typeofPizza", "Cheddar Supreme")
+            newId ->
+                i.putExtra("typeofPizza", pizzaName)
         }
 
         startActivity(i)

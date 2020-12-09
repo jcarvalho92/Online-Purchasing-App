@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.AddPizzaActivity">
+
+
+    <TextView
+        android:id="@+id/pizzaTxt"
+        android:layout_width="179dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="80dp"
+        android:text="Pizza Name: "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pizzaEdt"
+        android:layout_width="361dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaTxt" />
+
+    <EditText
+        android:id="@+id/ingredientsEdt"
+        android:layout_width="371dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:singleLine="false"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsTxt" />
+
+    <TextView
+        android:id="@+id/ingredientsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Ingredients: "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaEdt" />
+
+    <Button
+        android:id="@+id/addPizzaBtn"
+        android:layout_width="124dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="104dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Submit"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsEdt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

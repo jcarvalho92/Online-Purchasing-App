@@ -51,4 +51,26 @@ class Admin_CustomerOrder_Edit : AppCompatActivity() {
         })
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        //adding the Options menu in the activity
+        menuInflater.inflate(R.menu.addpizza,menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        val i = Intent(this, AddPizzaActivity::class.java)
+
+        //checking which menu was selected
+        /*when (item.itemId){
+            R.id.addpizza ->
+                i.putExtra("type", "standard")
+        }*/
+
+        startActivity(i)
+        return true
+    }
+
+
 }
